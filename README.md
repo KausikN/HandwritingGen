@@ -12,4 +12,4 @@
         The white fox ran over the brown fence.
         However the rabbit ran faster and got out of the fox's sight.
 
-     ![Handwriting Image](Examples/Example_Handwriting.png)
+     ![Handwriting Image](DocImages/Example_Handwriting.png)
