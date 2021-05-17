@@ -4,7 +4,7 @@ Library Codes for HandwritingGen
 
 # Imports
 import cv2
-import pywhatkit
+from pywhatkit import text_to_handwriting
 
 # Util Functions
 def Hex_to_RGB(val):
@@ -17,6 +17,6 @@ def ReadImage(path='handwriting.png'):
 
 # Main Functions
 def Text2Handwriting(text, savePath='handwriting.png', color=(0, 0, 0)):
-    pywhatkit.text_to_handwriting(text, save_to=savePath, rgb=color)
+    text_to_handwriting(text, save_to=savePath, rgb=color)
 
 # Driver Code
