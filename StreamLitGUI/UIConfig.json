@@ -1,0 +1,10 @@
+{
+    "PROJECT_NAME": "HandwritingGen",
+    "PROJECT_LINK": "https://github.com/KausikN/HandwritingGen",
+
+    "PROJECT_DESC": "Generate handwriting for any text",
+
+    "PROJECT_README": "README.md",
+
+    "PROJECT_MODES": ["Text to Handwriting", "TXT File to Handwriting"]
+}

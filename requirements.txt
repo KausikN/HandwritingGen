@@ -1,0 +1,4 @@
+streamlit==0.57.3
+pywhatkit
+json
+opencv-python-headless
