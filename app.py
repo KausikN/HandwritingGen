@@ -48,12 +48,12 @@ def text_to_handwriting():
     st.header("Convert Text to Handwriting")
 
     # Load Inputs
-    USERINPUT_text = st.text_area("Enter Text", "Hello World!")
-    if USERINPUT_text is None: return
-
     USERINPUT_textcolor_Hex = st.color_picker("Select Text Color")
     if USERINPUT_textcolor_Hex is None: return
     USERINPUT_textcolor_RGB = HandwritingGen.Hex_to_RGB(USERINPUT_textcolor_Hex)
+
+    USERINPUT_text = st.text_area("Enter Text", "Hello World!")
+    if USERINPUT_text is None: return
 
     # Process Inputs on Button Click
     if st.button('Generate Handwriting'):
@@ -67,13 +67,13 @@ def txt_file_to_handwriting():
     st.header("Convert Text to Handwriting")
 
     # Load Inputs
-    USERINPUT_file = st.file_uploader("Upload File", type=['txt'])
-    if USERINPUT_file is None: return
-    USERINPUT_text = USERINPUT_file.read()
-
     USERINPUT_textcolor_Hex = st.color_picker("Select Text Color")
     if USERINPUT_textcolor_Hex is None: return
     USERINPUT_textcolor_RGB = HandwritingGen.Hex_to_RGB(USERINPUT_textcolor_Hex)
+
+    USERINPUT_file = st.file_uploader("Upload File", type=['txt'])
+    if USERINPUT_file is None: return
+    USERINPUT_text = USERINPUT_file.read()
 
     # Process Inputs on Button Click
     if st.button('Generate Handwriting'):
