@@ -71,7 +71,7 @@ def txt_file_to_handwriting():
     if USERINPUT_textcolor_Hex is None: return
     USERINPUT_textcolor_RGB = HandwritingGen.Hex_to_RGB(USERINPUT_textcolor_Hex)
 
-    USERINPUT_file = st.file_uploader("Upload File", type=['txt', 'docx'])
+    USERINPUT_file = st.file_uploader("Upload File", type=['txt'])
     if USERINPUT_file is None: return
     USERINPUT_text = USERINPUT_file.read()
 
