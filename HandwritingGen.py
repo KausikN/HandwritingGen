@@ -3,7 +3,6 @@ Library Codes for HandwritingGen
 '''
 
 # Imports
-import cv2
 import requests
 from textblob import TextBlob
 
