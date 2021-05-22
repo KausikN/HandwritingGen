@@ -15,10 +15,6 @@ def text_to_handwriting(string: str, save_to: str = "pywhatkit.png", rgb: list =
     file.write(data)
     file.close()
 
-# Util Functions
-def ReadImage(path='handwriting.png'):
-    return cv2.imread(path)
-
 # Main Functions
 def Text2Handwriting(text, savePath='handwriting.png', color=(0, 0, 0)):
     text_to_handwriting(text, save_to=savePath, rgb=color)
