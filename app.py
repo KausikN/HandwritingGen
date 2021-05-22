@@ -41,6 +41,11 @@ def HomePage():
 # Repo Based Vars
 SAVEPATH_DEFAULT = 'handwriting.png'
 
+# Util Functions
+def Hex_to_RGB(val):
+    val = val.lstrip('#')
+    lv = len(val)
+    return tuple(int(val[i:i + lv // 3], 16) for i in range(0, lv, lv // 3))
 
 # Repo Based Functions
 def text_to_handwriting():
@@ -48,15 +53,15 @@ def text_to_handwriting():
     st.header("Convert Text to Handwriting")
 
     # Load Inputs
-    USERINPUT_textcolor_Hex = st.color_picker("Select Text Color")
-    if USERINPUT_textcolor_Hex is None: return
-    USERINPUT_textcolor_RGB = HandwritingGen.Hex_to_RGB(USERINPUT_textcolor_Hex)
-
+    USERINPUT_textcolor_RGB = Hex_to_RGB(st.color_picker("Select Text Color"))
     USERINPUT_text = st.text_area("Enter Text", "Hello World!")
-    if USERINPUT_text is None: return
+
+    USERINPUT_SpellCorrect = st.checkbox("Autocorrect")
 
     # Process Inputs on Button Click
     if st.button('Generate Handwriting'):
+        if USERINPUT_SpellCorrect:
+            USERINPUT_text = HandwritingGen.SpellCorrect(USERINPUT_text)
         HandwritingGen.Text2Handwriting(USERINPUT_text, color=USERINPUT_textcolor_RGB, savePath=SAVEPATH_DEFAULT)
 
         # Display Outputs
@@ -67,16 +72,15 @@ def txt_file_to_handwriting():
     st.header("Convert Text to Handwriting")
 
     # Load Inputs
-    USERINPUT_textcolor_Hex = st.color_picker("Select Text Color")
-    if USERINPUT_textcolor_Hex is None: return
-    USERINPUT_textcolor_RGB = HandwritingGen.Hex_to_RGB(USERINPUT_textcolor_Hex)
+    USERINPUT_textcolor_RGB = Hex_to_RGB(st.color_picker("Select Text Color"))
+    USERINPUT_text = st.file_uploader("Upload File", type=['txt']).read()
 
-    USERINPUT_file = st.file_uploader("Upload File", type=['txt'])
-    if USERINPUT_file is None: return
-    USERINPUT_text = USERINPUT_file.read()
+    USERINPUT_SpellCorrect = st.checkbox("Autocorrect")
 
     # Process Inputs on Button Click
     if st.button('Generate Handwriting'):
+        if USERINPUT_SpellCorrect:
+            USERINPUT_text = HandwritingGen.SpellCorrect(USERINPUT_text)
         HandwritingGen.Text2Handwriting(USERINPUT_text, color=USERINPUT_textcolor_RGB, savePath=SAVEPATH_DEFAULT)
 
         # Display Outputs

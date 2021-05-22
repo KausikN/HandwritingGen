@@ -1,3 +1,4 @@
 streamlit
 requests
 opencv-python-headless
+textblob
