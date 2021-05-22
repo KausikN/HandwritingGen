@@ -60,10 +60,8 @@ def text_to_handwriting():
 
     # Process Inputs on Button Click
     if st.button('Generate Handwriting'):
-        print(USERINPUT_text)
         if USERINPUT_SpellCorrect:
             USERINPUT_text = HandwritingGen.SpellCorrect(USERINPUT_text)
-        print(USERINPUT_text)
         HandwritingGen.Text2Handwriting(USERINPUT_text, color=USERINPUT_textcolor_RGB, savePath=SAVEPATH_DEFAULT)
 
         # Display Outputs
