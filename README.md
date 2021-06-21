@@ -3,6 +3,16 @@
 
  Hosted at [https://infinityjoker-handwriting-gen.herokuapp.com/](https://infinityjoker-handwriting-gen.herokuapp.com/)
 
+# GUI
+ - Install streamlit using
+   ```
+   pip install streamlit
+   ```
+ - Launch Streamlit GUI in the repo folder by
+   ```
+   streamlit run app.py
+   ```
+
 # Handwriting Generator
  
    - Run Text2Handwriting.py file
