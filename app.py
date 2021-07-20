@@ -54,7 +54,8 @@ def text_to_handwriting():
 
     # Load Inputs
     USERINPUT_textcolor_RGB = Hex_to_RGB(st.color_picker("Select Text Color"))
-    USERINPUT_text = st.text_area("Enter Text", "Hello World!")
+    InputTextBox = st.empty()
+    USERINPUT_text = InputTextBox.text_area("Enter Text", "Hello World!")
 
     USERINPUT_SpellCorrect = st.checkbox("Autocorrect")
 
@@ -73,7 +74,10 @@ def txt_file_to_handwriting():
 
     # Load Inputs
     USERINPUT_textcolor_RGB = Hex_to_RGB(st.color_picker("Select Text Color"))
-    USERINPUT_text = st.file_uploader("Upload File", type=['txt']).read()
+    USERINPUT_textData = st.file_uploader("Upload File", type=['txt'])
+    USERINPUT_text = "This is some test text!"
+    if USERINPUT_textData is not None:
+        USERINPUT_text = USERINPUT_textData.read()
 
     USERINPUT_SpellCorrect = st.checkbox("Autocorrect")
 
