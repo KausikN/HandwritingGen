@@ -54,8 +54,7 @@ def text_to_handwriting():
 
     # Load Inputs
     USERINPUT_textcolor_RGB = Hex_to_RGB(st.color_picker("Select Text Color"))
-    InputTextBox = st.empty()
-    USERINPUT_text = InputTextBox.text_area("Enter Text", "Hello World!")
+    USERINPUT_text = st.text_area("Enter Text", "Hello World!")
 
     USERINPUT_SpellCorrect = st.checkbox("Autocorrect")
 
