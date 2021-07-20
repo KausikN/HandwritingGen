@@ -1,0 +1,8 @@
+{
+    "repo_name": "HandwritingGen",
+    "requirements": [
+        "streamlit",
+        "requests",
+        "textblob==0.15.3"
+    ]
+}
