@@ -6,7 +6,7 @@ Stream lit GUI for hosting HandwritingGen
 import streamlit as st
 import json
 
-import HandwritingGen
+from HandwritingGen import *
 
 # Main Vars
 config = json.load(open('./StreamLitGUI/UIConfig.json', 'r'))
@@ -39,7 +39,7 @@ def HomePage():
 
 #############################################################################################################################
 # Repo Based Vars
-SAVEPATH_DEFAULT = 'handwriting.png'
+SAVEPATH_DEFAULT = "GeneratedVisualisations/Output.png"
 
 # Util Functions
 def Hex_to_RGB(val):
@@ -61,8 +61,8 @@ def text_to_handwriting():
     # Process Inputs on Button Click
     if st.button('Generate Handwriting'):
         if USERINPUT_SpellCorrect:
-            USERINPUT_text = HandwritingGen.SpellCorrect(USERINPUT_text)
-        HandwritingGen.Text2Handwriting(USERINPUT_text, color=USERINPUT_textcolor_RGB, savePath=SAVEPATH_DEFAULT)
+            USERINPUT_text = SpellCorrect(USERINPUT_text)
+        Text2Handwriting(USERINPUT_text, color=USERINPUT_textcolor_RGB, savePath=SAVEPATH_DEFAULT)
 
         # Display Outputs
         st.image(SAVEPATH_DEFAULT, use_column_width=True, clamp=True)
@@ -83,8 +83,8 @@ def txt_file_to_handwriting():
     # Process Inputs on Button Click
     if st.button('Generate Handwriting'):
         if USERINPUT_SpellCorrect:
-            USERINPUT_text = HandwritingGen.SpellCorrect(USERINPUT_text)
-        HandwritingGen.Text2Handwriting(USERINPUT_text, color=USERINPUT_textcolor_RGB, savePath=SAVEPATH_DEFAULT)
+            USERINPUT_text = SpellCorrect(USERINPUT_text)
+        Text2Handwriting(USERINPUT_text, color=USERINPUT_textcolor_RGB, savePath=SAVEPATH_DEFAULT)
 
         # Display Outputs
         st.image(SAVEPATH_DEFAULT, use_column_width=True, clamp=True)

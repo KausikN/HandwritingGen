@@ -12,7 +12,7 @@
             "dependencies": [
                 "streamlit.py",
                 "json.py",
-                "HandwritingGen.py"
+                "*.py"
             ]
         },
         "HandwritingGen.py": {
@@ -23,65 +23,46 @@
             "subDir": "",
             "dependencies": [
                 "requests.py",
-                "textblob.py"
-            ]
-        },
-        "SeparateScripts/Text2Handwriting.py": {
-            "name": "Text2Handwriting",
-            "type": "local",
-            "link": "https://github.com/KausikN/HandwritingGen/blob/master/SeparateScripts/Text2Handwriting.py",
-            "parentDir": "E:/Github Codes and Projects/Projects/HandwritingGen",
-            "subDir": "SeparateScripts",
-            "dependencies": [
-                "cv2.py",
-                "pywhatkit.py"
+                "TextBlob.py"
             ]
         },
         "streamlit.py": {
             "name": "streamlit",
-            "type": "inbuilt",
+            "type": "missing",
             "link": "",
-            "parentDir": "E:/Github Codes and Projects/Projects/HandwritingGen",
+            "parentDir": "",
             "subDir": "",
             "dependencies": []
         },
-        "pywhatkit.py": {
-            "name": "pywhatkit",
-            "type": "inbuilt",
+        "TextBlob.py": {
+            "name": "TextBlob",
+            "type": "missing",
             "link": "",
-            "parentDir": "E:/Github Codes and Projects/Projects/HandwritingGen",
-            "subDir": "",
-            "dependencies": []
-        },
-        "textblob.py": {
-            "name": "textblob",
-            "type": "inbuilt",
-            "link": "",
-            "parentDir": "E:/Github Codes and Projects/Projects/HandwritingGen",
-            "subDir": "",
-            "dependencies": []
-        },
-        "requests.py": {
-            "name": "requests",
-            "type": "inbuilt",
-            "link": "",
-            "parentDir": "E:/Github Codes and Projects/Projects/HandwritingGen",
-            "subDir": "",
-            "dependencies": []
-        },
-        "cv2.py": {
-            "name": "cv2",
-            "type": "inbuilt",
-            "link": "",
-            "parentDir": "E:/Github Codes and Projects/Projects/HandwritingGen",
+            "parentDir": "",
             "subDir": "",
             "dependencies": []
         },
         "json.py": {
             "name": "json",
-            "type": "inbuilt",
+            "type": "missing",
             "link": "",
-            "parentDir": "E:/Github Codes and Projects/Projects/HandwritingGen",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "requests.py": {
+            "name": "requests",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "*.py": {
+            "name": "*",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
             "subDir": "",
             "dependencies": []
         }
